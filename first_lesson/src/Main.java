@@ -74,4 +74,81 @@ public class Main {
         }
         System.out.println();
     }
+
+    // Задача 8
+    private static void sumOfEvenNumbers(Scanner scanner) {
+        System.out.print("Введите два целых числа A и B: ");
+        int A = scanner.nextInt();
+        int B = scanner.nextInt();
+        int evenSum = 0;
+        for (int i = A; i <= B; i++) {
+            if (i % 2 == 0) evenSum += i;
+        }
+        System.out.println("Сумма чётных чисел от " + A + " до " + B + ": " + evenSum);
+    }
+
+    // Задача 9
+    private static void reverseString(Scanner scanner) {
+        System.out.print("Введите строку для реверса: ");
+        scanner.nextLine();
+        String str = scanner.nextLine();
+        String reversedStr = new StringBuilder(str).reverse().toString();
+        System.out.println("Обратный порядок строки: " + reversedStr);
+    }
+
+    // Задача 10
+    private static void countDigits(Scanner scanner) {
+        System.out.print("Введите целое число для подсчета цифр: ");
+        int number = scanner.nextInt();
+        int digitCount = String.valueOf(Math.abs(number)).length();
+        System.out.println("Количество цифр: " + digitCount);
+    }
+
+    // Задача 11
+    private static void calculateFactorial(Scanner scanner) {
+        System.out.print("Введите целое число N для вычисления факториала: ");
+        int N = scanner.nextInt();
+        long factorial = 1;
+        for (int i = 1; i <= N; i++) {
+            factorial *= i;
+        }
+        System.out.println("Факториал " + N + ": " + factorial);
+    }
+
+    // Задача 12
+    private static void sumOfDigits(Scanner scanner) {
+        System.out.print("Введите целое число для подсчета суммы цифр: ");
+        int number = scanner.nextInt();
+        int sumOfDigits = 0;
+        while (number != 0) {
+            sumOfDigits += Math.abs(number % 10);
+            number /= 10;
+        }
+        System.out.println("Сумма цифр: " + sumOfDigits);
+    }
+
+    // Задача 13
+    private static void checkPalindrome(Scanner scanner) {
+        System.out.print("Введите строку для проверки на палиндром: ");
+        String str = scanner.next();
+        String cleanedStr = str.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+        String reversedCleanedStr = new StringBuilder(cleanedStr).reverse().toString();
+        System.out.println(cleanedStr.equals(reversedCleanedStr) ? "Палиндром" : "Не палиндром");
+    }
+
+    // Задача 14
+    private static void findMaxInArray(Scanner scanner) {
+        System.out.print("Введите размер массива: ");
+        int size = scanner.nextInt();
+        int[] array = new int[size];
+        System.out.println("Введите элементы массива:");
+        for (int i = 0; i < size; i++) {
+            array[i] = scanner.nextInt();
+        }
+        int max = array[0];
+        for (int num : array) {
+            if (num > max) max = num;
+        }
+        System.out.println("Максимальное число в массиве: " + max);
+    }
 }
