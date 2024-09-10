@@ -1,6 +1,32 @@
 import java.util.Scanner;
 
 public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        checkEvenOrOdd(scanner);
+        findMinimumOfThree(scanner);
+        multiplicationTable();
+        sumOfNumbers(scanner);
+        fibonacciNumbers(scanner);
+        checkPrimeNumber(scanner);
+        printNumbersInReverse(scanner);
+        sumOfEvenNumbers(scanner);
+        reverseString(scanner);
+        countDigits(scanner);
+        calculateFactorial(scanner);
+        sumOfDigits(scanner);
+        checkPalindrome(scanner);
+        findMaxInArray(scanner);
+        sumOfArrayElements(scanner);
+        countPositiveAndNegativeNumbers(scanner);
+        findPrimesInRange(scanner);
+        countVowelsAndConsonants(scanner);
+        reverseWordsInString(scanner);
+        checkArmstrongNumber(scanner);
+
+        scanner.close();
+    }
 
     // Задача 1
     private static void checkEvenOrOdd(Scanner scanner) {
